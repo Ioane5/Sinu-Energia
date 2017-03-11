@@ -1,11 +1,25 @@
-
 <!-- AIzaSyCPq2xt5HMeGkVgTdZP9WhYTqkW7_avp0s -->
+<div class="loader_map_container">
+  <div class="preloader-wrapper active loader_map">
+    <div class="spinner-layer spinner-red-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="map"></div>
 <script>
 
   function getLocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
+      navigator.geolocation.getCurrentPosition(function (position) {
         var map = new google.maps.Map(document.getElementById('map'));
       });
     } else {
@@ -27,7 +41,7 @@
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
+      navigator.geolocation.getCurrentPosition(function (position) {
         var pos = {
           lat: position.coords.latitude,
           lng: position.coords.longitude
@@ -43,7 +57,7 @@
         view.style.visibility = "visible";
         Materialize.fadeInImage('#map');
 
-      }, function() {
+      }, function () {
       });
     } else {// Browser doesn't support Geolocation
     }
