@@ -39,6 +39,10 @@
           map: map
         });
 
+        var view = document.getElementById('map');
+        view.style.visibility = "visible";
+        Materialize.fadeInImage('#map');
+
       }, function() {
       });
     } else {// Browser doesn't support Geolocation
