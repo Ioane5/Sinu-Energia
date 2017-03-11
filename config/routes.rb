@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root :to => "welcome#index"
-
+  get 'calculator' => 'welcome#calculator'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
